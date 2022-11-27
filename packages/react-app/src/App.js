@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
 import { useEthers } from "@usedapp/core";
 import styles from './styles';
 import { uniswapLogo } from './assets';
+import {Exchange,Loader,WalletButton} from './components'
 
 const App = () =>  {
   const { account } = useEthers();
@@ -28,9 +29,11 @@ const App = () =>  {
               <div className={styles.exchange}>
                 {account ? (
                   poolsLoading ? (
-                   <Loader /> 
+                    <Loader title="Loading pools,
+                   please wait!" /> 
                   ) : <Exchange />
-                ) : <Loader />}
+                ) : <Loader title="Please connect your wallet
+                "/>}
               </div>
               <div className="blue_gradient"/>
             </div>
