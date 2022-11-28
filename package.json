@@ -20,5 +20,11 @@
       "packages/*"
     ]
   },
-  "resolutions": {"react-error-overlay":"6.0.9"}
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "dependencies": {
+    "@ethersproject/contracts": "^5.7.0",
+    "@uniswap/sdk": "^3.0.3"
+  }
 }
